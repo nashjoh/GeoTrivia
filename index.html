@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoTrivia</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="logo">GEOTRIVIA</h1>
+        <p class="subheading">An adventure for kids</p>
+        <p>Explore the world with fun quizzes and educational games.</p>
+    </header>
+
+    <main class="main-content">
+        <div class="centered-box">
+            <h2>Login or Sign Up</h2>
+            <div class="button-container">
+                <button onclick="openOverlay('loginOverlay')">Login</button>
+                <button onclick="openOverlay('signupOverlay')">Sign Up</button>
+            </div>
+            <p class="learn-more">
+                <a href="#" onclick="openOverlay('learnMoreOverlay')">Learn More</a>
+            </p>
+        </div>
+    </main>
+
+    <div class="overlay" id="loginOverlay">
+        <div class="overlay-content">
+            <h2>Login</h2>
+            <form>
+                <input type="text" placeholder="Username" required><br>
+                <input type="password" placeholder="Password" required><br>
+                <button type="submit">Login</button>
+            </form>
+            <button class="overlay-back-btn" onclick="closeOverlay('loginOverlay')">Back</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="signupOverlay">
+        <div class="overlay-content">
+            <h2>Sign Up</h2>
+            <form>
+                <input type="text" placeholder="Username" required><br>
+                <input type="password" placeholder="Password" required><br>
+                <input type="email" placeholder="Email" required><br>
+                <button type="submit">Sign Up</button>
+            </form>
+            <button class="overlay-back-btn" onclick="goToHomePage()">Back</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="learnMoreOverlay">
+        <div class="overlay-content">
+            <h2>About Us</h2>
+            <h3>About GeoTrivia</h3>
+            <p>
+                GeoTrivia is an educational app designed to help kids explore the world through fun quizzes and games.
+                With GeoTrivia, children can:
+            </p>
+            <ul>
+                <li>Test their knowledge with quizzes on geography, history, and culture.</li>
+                <li>Challenge themselves with quizzes at different difficulty levels.</li>
+                <li>Learn new facts and expand their understanding of the world.</li>
+                <li>Track their progress and earn achievements as they play.</li>
+            </ul>
+            <p>
+                Our app combines learning with entertainment, making it a great tool for kids to enhance their social science skills while having fun. GeoTrivia is safe, kid-friendly, and designed to ignite curiosity and exploration.
+            </p>
+            <button class="overlay-close-btn" onclick="closeOverlay('learnMoreOverlay')">Close</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
